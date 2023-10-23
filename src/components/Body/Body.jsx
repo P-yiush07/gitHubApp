@@ -11,8 +11,9 @@ function Body() {
 
   useEffect(() => {
     if (username) {
+      const encodedUsername = encodeURIComponent(username);
       // Fetch user data from an API based on the username
-      fetch(`https://api.github.com/users/${username}`)
+      fetch(`https://api.github.com/users/${encodedUsername}`)
         .then((response) => response.json())
         .then((data) => {
           setUserData(data);
