@@ -5,6 +5,22 @@
     <link rel="icon" type="image/svg+xml" href="/gitHubApp/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+
+    <script type="text/javascript">
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })(window.location);
+    </script>
+
     <script type="module" crossorigin src="/gitHubApp/assets/index-b06bd3e1.js"></script>
     <link rel="stylesheet" href="/gitHubApp/assets/index-b53f57a1.css">
   </head>
